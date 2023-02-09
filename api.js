@@ -42,4 +42,7 @@ api.use('/usuario_rel_servicio',usuario_rel_servicio)
 const tipodeServicio = require ('./Server/routes/tipodeServicio');
 api.use('/tipodeServicio',tipodeServicio)
 
+const iniciarSesion = require ('./Server/routes/iniciarSesion');
+api.use('/iniciarSesion',iniciarSesion)
+
 module.exports = api;
