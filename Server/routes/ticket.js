@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const ticketCrtl = require ('../controllers/ticket.controller');
 /***************************RUTAS BASE GET,GETBYID,UPDATE,SET********************************** */
-router.get('/get',fnGetTicket);
+router.get('/getticket',fnGetTicket);
 router.post('/post', setTicket);
 /********************************************************************************************* */
 

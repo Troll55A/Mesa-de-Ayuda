@@ -4,7 +4,7 @@ const router = express.Router();
 const usuarioCtrl = require ('../controllers/usuario.controller');
 /***************************RUTAS BASE GET,GETBYID,UPDATE,SET********************************** */
 
-router.get('/get',fnGetUsuario);
+router.get('/getUsuarios',fnGetUsuario);
 router.post('/post', setUsuario);
 router.post('/actualizarUsuario',actualizarUsuario);
 /********************************************************************************************* */

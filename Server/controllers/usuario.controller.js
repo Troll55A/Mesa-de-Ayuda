@@ -1,7 +1,6 @@
 'use strict'
 const usuarioModels = require ('../models/usuario.model');
-const bcrypt = require('bcrypt-nodejs');
-const service = require('../modules/encryptToken');
+
 module.exports = {
     fnGetUsuario: fnGetUsuario,
     setUsuario:setUsuario,
@@ -14,7 +13,7 @@ function fnGetUsuario(){
         usuarioModels.fnGetUsuario()
         .then(function(result){
             console.log("resultado del paso 2", result)
-            resolve(!result.err ? {ok:true, usuario:result.result}: reject({ok:false, error:'Error al consultar usuario'}))
+            resolve(!result.err ? {ok:true, addenda:result.result}: reject({ok:false, error:'Error al consultar usuario'}))
         })
     })
 }
