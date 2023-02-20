@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const AreaCrtl = require ('../controllers/area.controller');
 /***************************RUTAS BASE GET,GETBYID,UPDATE,SET********************************** */
-router.get('/get',fnGetArea);
+router.get('/getarea',fnGetArea);
 router.post('/post', fnagregaArea);
 router.post('/eliminarArea', eliminarArea);
 /********************************************************************************************* */

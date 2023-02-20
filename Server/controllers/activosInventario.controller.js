@@ -11,7 +11,7 @@ function fnGetActivos(){
         activosModels.fnGetActivos()
         .then(function(result){
             console.log("resultado del paso 2", result)
-            resolve(!result.err ? {ok:true, activos:result.result}: reject({ok:false, error:'Error al consultar activos'}))
+            resolve(!result.err ? {ok:true, addenda:result.result}: reject({ok:false, error:'Error al consultar activos'}))
         })
     })
 }

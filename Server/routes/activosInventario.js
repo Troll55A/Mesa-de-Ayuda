@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const activoCtrl = require ('../controllers/activosInventario.controller');
 /***************************RUTAS BASE GET,GETBYID,UPDATE,SET********************************** */
-router.get('/get',fnGetActivos);
+router.get('/getActivos',fnGetActivos);
 router.post('/post',agregaActivos);
 /********************************************************************************************* */
 

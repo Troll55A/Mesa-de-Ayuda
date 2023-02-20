@@ -16,7 +16,7 @@ function fnGetArea(){
                 if (result.err) {
                     resolve({ ok: false, error: 'No se pudo obtener las areas' });
                 } else {
-                    resolve({ ok: true, area: result.result });
+                    resolve({ ok: true, addenda: result.result });
                 }
             });
     });

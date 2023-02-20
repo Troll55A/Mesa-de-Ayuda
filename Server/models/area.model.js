@@ -11,7 +11,11 @@ module.exports = {
 function fnGetArea(){
     
     return helpers.mysqlQuery('GET',conn_mysql,
-    `SELECT * FROM area`
+    `SELECT a.*, u.ubicacion FROM 
+    area a,
+    lugar u
+     WHERE 
+     a.idarea = u.idlugar;`
     )
 }
 
