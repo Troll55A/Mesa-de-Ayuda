@@ -9,13 +9,15 @@ module.exports = {
 function fnGetTicket(){
     
     return helpers.mysqlQuery('GET',conn_mysql,
-    `SELECT t.*, u.nombre,f.num_folio,tip.descripcion  FROM 
+    `SELECT t.*, u.nombre,f.num_folio,tip.descripcion, sta.Descripcion FROM 
     tiket t,
     usuarios u,
     folios f,
-    tipo_servicio tip
+    tipo_servicio tip,
+    statusticket sta
      WHERE 
-     t.idusuarios = u.idusuarios and  t.idfolios = f.idfolios and t.idtipo_servicio = tip.idtipo_servicio;`
+     t.idusuarios = u.idusuarios and  t.idfolios = f.idfolios and t.idtipo_servicio = tip.idtipo_servicio and
+     t.idstatusTicket = sta.idstatusTicket;`
     )
 }
 function setTicket(datos) {

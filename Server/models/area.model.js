@@ -15,7 +15,7 @@ function fnGetArea(){
     area a,
     lugar u
      WHERE 
-     a.idarea = u.idlugar;`
+     a.idlugar = u.idlugar;`
     )
 }
 
