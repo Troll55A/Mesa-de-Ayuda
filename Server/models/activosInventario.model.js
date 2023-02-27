@@ -10,7 +10,12 @@ module.exports = {
 function fnGetActivos(){
     
     return helpers.mysqlQuery('GET',conn_mysql,
-    `SELECT * FROM activos`
+    `SELECT a.*, d.modelo,d.marca,d.num_serie, t.descripcion as tipo_activo_desc FROM 
+    activos a,
+    detallepc d,
+    tipoactivo t
+     WHERE 
+     a.iddetallepc = d.iddetallepc and a.idtipoactivo = t.idtipoactivo;`
     )
 }
 function agregaActivos(datos) {

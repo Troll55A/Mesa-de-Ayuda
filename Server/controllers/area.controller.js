@@ -22,6 +22,7 @@ function fnGetArea(){
     });
 }
 function fnagregaArea(datos){
+    console.log("fnagregaArea",datos);
     return new Promise(function (resolve) {
         AreaModels.existNomArea(datos)
             .then(function (result) {
