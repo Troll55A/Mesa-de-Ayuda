@@ -27,7 +27,7 @@ function setUsuario(datos) {
 function existNomUsuario(datos) {
     console.log("Funcion existNomtipoActivos",datos)
     return helpers.mysqlQuery('GET', conn_mysql,
-    `call setUsuarios(@fecha,@idrol,@num_empleado,@nombre,@apellidoP,@apellidoM,@idlugar,@idarea,@email,@password,@status)`
+    `call setUsuarios(@idrol,@num_empleado,@nombre,@apellidoP,@apellidoM,@idlugar,@idarea,@email,@password,@status)`
     ,datos)
 }
 
