@@ -12,7 +12,7 @@ function fnGetRol(){
         rolModels.fnGetRol()
         .then(function(result){
             console.log("resultado del paso 2", result)
-            resolve(!result.err ? {ok:true, anyrol:result.result}: reject({ok:false, error:'Error al consultar rol'}))
+            resolve(!result.err ? {ok:true, addenda:result.result}: reject({ok:false, error:'Error al consultar rol'}))
         })
     })
 }
