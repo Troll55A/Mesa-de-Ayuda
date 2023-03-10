@@ -9,7 +9,7 @@ module.exports = {
 function fnGetTicket(){
     
     return helpers.mysqlQuery('GET',conn_mysql,
-    `SELECT t.*, u.nombre,f.num_folio,tip.descripcion, sta.Descripcion FROM 
+    `SELECT t.*, u.nombre,f.num_folio,tip.descripcion, sta.Descripcion as estado_ticket FROM 
     tiket t,
     usuarios u,
     folios f,
